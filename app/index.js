@@ -1,42 +1,23 @@
 import React from 'react'
-import { Text, ScrollView } from 'react-native';
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 
-import LineService from '../app/components/presentational/LineService'
+import * as reducers from './reducers'
 
-import styles from './styles/MyTFL'
+import MyTFLContainer from './containers/MyTFLContainer'
 
-class MyTFL extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      tflData: ''
-    }
-  }
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const reducer = combineReducers(reducers);
+const store = createStoreWithMiddleware(reducer);
 
-  componentWillMount() {
-    fetch('https://api.tfl.gov.uk/line/mode/tube,tflrail/status')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({tflData: data})
-    })
-  }
-
-  renderTubeStatuses() {
-    if (!this.state.tflData) {return null}
-    return this.state.tflData.map((data, index) => {
-      return (
-        <LineService key={`data-${index}`} data={data} />
-      )
-    })
-  }
-
+class App extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        {this.renderTubeStatuses()}
-      </ScrollView>
-    );
+      <Provider store={store}>
+        <MyTFLContainer />
+      </Provider>
+    )
   }
 }
-
-export default MyTFL
+export default App

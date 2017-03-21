@@ -18,14 +18,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     padding: 8,
     textAlign: 'center',
     borderLeftColor: 'gray',
     borderLeftWidth: 1,
   },
   goodService: {
-    backgroundColor: '#8bed9f',
+    backgroundColor: '#1dbc0b',
+    color: 'white',
   },
   partClosure: {
     backgroundColor: 'yellow',
@@ -35,6 +36,9 @@ const styles = StyleSheet.create({
   },
   noService: {
     backgroundColor: '#ff2121',
+  },
+  minorDelays: {
+    backgroundColor: '#f4ce42',
   },
   bakerloo: {
     borderLeftColor: '#B36305',

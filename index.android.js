@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
 
-import MyTFL from './app/index'
+import App from './app/index'
 
-AppRegistry.registerComponent('MyTFL', () => MyTFL);
+AppRegistry.registerComponent('MyTFL', () => App);

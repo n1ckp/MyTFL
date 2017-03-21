@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import styles from '../../../app/styles/LineService'
+import styles from '../styles/LineService'
 
 class LineService extends React.Component {
   getLineStyle() {
