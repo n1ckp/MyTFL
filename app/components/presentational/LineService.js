@@ -10,11 +10,13 @@ class LineService extends React.Component {
 
   getStatusStyle() {
     const severityLevel = this.props.data.lineStatuses[0].statusSeverity
-    let statusStyle = styles.goodService
-    if (severityLevel === 5) {
-      statusStyle = styles.partClosure
-    }
-    return [styles.status, statusStyle]
+    const serviceCodes = [
+      'specialService', 'closed', 'noService', 'noService', 'plannedClosure', 'partClosure',
+      'severeDelays', 'reducedService', 'busService', 'minorDelays', 'goodService', 'partClosed',
+      'exitOnly', 'noStepFreeAccess', 'changeOfFrequency', 'diverted', 'notRunning',
+      'issuesReported', 'noIssues', 'information'
+    ]
+    return [styles.status, styles[serviceCodes[severityLevel]]]
   }
 
   render() {

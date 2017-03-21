@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   line: {
-    fontSize: 20,
+    fontSize: 16,
     flex: 1,
     padding: 8,
     paddingLeft: 24,
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   status: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 16,
     flex: 1,
     backgroundColor: 'green',
     padding: 8,
@@ -25,10 +25,16 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
   },
   goodService: {
-    backgroundColor: 'green',
+    backgroundColor: '#8bed9f',
   },
   partClosure: {
     backgroundColor: 'yellow',
+  },
+  severeDelays: {
+    backgroundColor: '#ffb14c',
+  },
+  noService: {
+    backgroundColor: '#ff2121',
   },
   bakerloo: {
     borderLeftColor: '#B36305',
