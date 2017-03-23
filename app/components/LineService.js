@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { TouchableHighlight, View, Text } from 'react-native'
 
 import styles from '../styles/LineService'
 
@@ -22,10 +22,12 @@ class LineService extends React.Component {
   render() {
     const data = this.props.data
     return (
-      <View style={styles.container}>
-        <Text style={this.getLineStyle()}>{data.name}</Text>
-        <Text style={this.getStatusStyle()}>{data.lineStatuses[0].statusSeverityDescription}</Text>
-      </View>
+      <TouchableHighlight onPress={() => {this.props.onTouch()}}>
+        <View style={styles.container}>
+          <Text style={this.getLineStyle()}>{data.name}</Text>
+          <Text style={this.getStatusStyle()}>{data.lineStatuses[0].statusSeverityDescription}</Text>
+        </View>
+      </TouchableHighlight>
     )
   }
 }

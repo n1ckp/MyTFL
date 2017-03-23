@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text } from 'react-native'
+import { ScrollView, Text, Button } from 'react-native'
 
 import LineService from './LineService'
 
@@ -14,7 +14,7 @@ export default class MyTFL extends React.Component {
     if (this.props.loading || !this.props.lineStatuses) {return <Text style={styles.loading}>Loading...</Text>}
     return this.props.lineStatuses.map((data, index) => {
       return (
-        <LineService key={`data-${index}`} data={data} />
+        <LineService key={`data-${index}`} data={data} onTouch={() => {this.props.navigator.push({id: 'LineScreen', lineIndex: index})}} />
       )
     })
   }
