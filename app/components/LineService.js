@@ -14,7 +14,7 @@ class LineService extends React.Component {
       'specialService', 'closed', 'noService', 'noService', 'plannedClosure', 'partClosure',
       'severeDelays', 'reducedService', 'busService', 'minorDelays', 'goodService', 'partClosed',
       'exitOnly', 'noStepFreeAccess', 'changeOfFrequency', 'diverted', 'notRunning',
-      'issuesReported', 'noIssues', 'information'
+      'issuesReported', 'noIssues', 'information', 'serviceClosed'
     ]
     return [styles.status, styles[serviceCodes[severityLevel]]]
   }

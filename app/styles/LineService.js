@@ -13,9 +13,9 @@ const styles = StyleSheet.create({
     padding: 8,
     paddingLeft: 24,
     borderLeftWidth: 16,
+    fontFamily: 'avenir',
   },
   status: {
-    fontWeight: 'bold',
     fontSize: 16,
     flex: 1,
     backgroundColor: 'white',
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderLeftColor: 'gray',
     borderLeftWidth: 1,
+    fontFamily: 'avenir',
   },
   goodService: {
     backgroundColor: '#1dbc0b',
@@ -35,6 +36,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffb14c',
   },
   noService: {
+    backgroundColor: '#ff2121',
+  },
+  serviceClosed: {
     backgroundColor: '#ff2121',
   },
   minorDelays: {
