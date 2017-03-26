@@ -15,9 +15,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'avenir',
   },
+  titleContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   title: {
     fontSize: 24,
     fontFamily: 'avenir',
+    textAlign: 'center',
   },
 })
 export default styles

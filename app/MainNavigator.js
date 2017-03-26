@@ -55,7 +55,11 @@ class MainNavigator extends React.Component {
                 else if (route.id === 'LineScreen') {
                   titleText = "Line Status"
                 }
-                return <Text style={styles.title}>{titleText}</Text>
+                return (
+                  <View style={styles.titleContainer}>
+                    <Text style={styles.title}>{titleText}</Text>
+                  </View>
+                )
               },
             }}
             style={styles.container}

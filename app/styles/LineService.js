@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   },
   serviceClosed: {
     backgroundColor: '#ff2121',
+    color: 'white',
   },
   minorDelays: {
     backgroundColor: '#f4ce42',
