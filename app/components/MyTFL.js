@@ -11,10 +11,11 @@ export default class MyTFL extends React.Component {
   }
 
   renderTubeStatuses() {
+    const {navigate} = this.props.navigation
     if (this.props.loading || !this.props.lineStatuses) {return <Text style={styles.loading}>Loading...</Text>}
     return this.props.lineStatuses.map((data, index) => {
       return (
-        <LineService key={`data-${index}`} data={data} onTouch={() => {this.props.navigator.push({id: 'LineScreen', lineIndex: index})}} />
+        <LineService key={`data-${index}`} data={data} onTouch={() => navigate('Line', {lineIndex: index})} />
       )
     })
   }

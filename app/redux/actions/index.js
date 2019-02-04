@@ -17,7 +17,7 @@ export const receivedLineStatusData = (data) => {
 export const getLineStatusData = () => {
   return function (dispatch) {
     dispatch(fetchingLineStatusData())
-    return fetch('https://api.tfl.gov.uk/line/mode/tube,tflrail/status')
+    return fetch('https://api.tfl.gov.uk/line/mode/tube,tflrail,dlr/status')
       .then(response => response.json())
       .then(data => {
         dispatch(receivedLineStatusData(data))

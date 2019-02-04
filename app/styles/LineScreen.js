@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   lineName: {
     fontSize: 20,
     padding: 24,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
   },
   status: {
     fontSize: 20,
     padding: 24,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
   },
   disruptionsContainer: {
     backgroundColor: 'yellow',
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   disruptionsContent: {
     color: '#6E6E6E',
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
     marginBottom: 8,
   }
 })

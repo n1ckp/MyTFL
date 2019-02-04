@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
   },
   titleContainer: {
     flex: 1,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
     textAlign: 'center',
   },
 })

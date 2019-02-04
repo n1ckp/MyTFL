@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { getLineStatusData } from '../actions'
+import { getLineStatusData } from '../redux/actions'
 
 import MyTFL from '../components/MyTFL'
 
@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     lineStatuses: state.tflData.lineStatuses,
     loading: state.tflData.loading,
+    navigation: ownProps.navigation,
   }
 }
 

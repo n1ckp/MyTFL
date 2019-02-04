@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     padding: 8,
     paddingLeft: 24,
     borderLeftWidth: 16,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
   },
   status: {
     fontSize: 16,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderLeftColor: 'gray',
     borderLeftWidth: 1,
-    fontFamily: 'avenir',
+    fontFamily: 'sans-serif',
   },
   goodService: {
     backgroundColor: '#1dbc0b',
@@ -81,5 +81,8 @@ const styles = StyleSheet.create({
   'waterloo-city': {
     borderLeftColor: '#95CDBA',
   },
+  dlr: {
+    borderLeftColor: '#00afae',
+  }
 })
 export default styles
