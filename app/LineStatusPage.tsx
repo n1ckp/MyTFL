@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import LineStatusRow from './LineStatusRow'
+import { PAGE_IDS } from './utils/navigation'
 
 const styles = StyleSheet.create({
   container: {
@@ -22,7 +23,7 @@ const LineStatusPage = ({ navigation }) => {
   }, [])
 
   const onPressLine = (lineDetails: any) => {
-    navigation.navigate('LineDetails', lineDetails)
+    navigation.navigate(PAGE_IDS.LINE_DETAILS, lineDetails)
   }
 
   return (

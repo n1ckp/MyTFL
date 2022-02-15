@@ -1,18 +1,19 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
+import { PAGE_IDS } from './app/utils/navigation';
+import LineStatusesNavStack from './app/lineStatuses/LineStatusesNavStack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LineDetailsPage from './app/LineDetailsPage';
-import LineStatusPage from './app/LineStatusPage';
 
-const Stack = createNativeStackNavigator()
+const AppStack = createNativeStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LineStatuses">
-        <Stack.Screen name="LineStatuses" component={LineStatusPage} options={{ title: 'Tube lines' }} />
-        <Stack.Screen name="LineDetails" component={LineDetailsPage} options={({ route }) => ({ title: route.params.name })} />
-      </Stack.Navigator>
+      <AppStack.Navigator initialRouteName={PAGE_IDS.LINE_STATUSES}>
+        <AppStack.Screen name={PAGE_IDS.LINE_STATUSES} component={LineStatusesNavStack} options={{ headerShown: false }} />
+        <AppStack.Screen name={PAGE_IDS.LINE_DETAILS} component={LineDetailsPage} options={({ route }) => ({ title: route.params.name })} />
+      </AppStack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
   );
